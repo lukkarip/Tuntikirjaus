@@ -1,0 +1,63 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+
+/* Omat lisäykset */
+
+.table-editable {
+  position: relative;
+}
+
+.glyphicon {
+  font-size: 20px;
+}
+
+.table-remove {
+  color: #700;
+  cursor: pointer;
+}
+
+.table-up, .table-down {
+  color: #007;
+  cursor: pointer;
+}
+
+.table-add {
+  color: #070;
+  cursor: pointer;
+  position: absolute;
+  top: 8px;
+  right: 0;
+
+}
+
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1400px;
+    }
+}
+

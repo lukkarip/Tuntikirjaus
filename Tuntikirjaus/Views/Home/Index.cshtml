@@ -1,0 +1,86 @@
+﻿
+<script src="~/Scripts/jquery-1.10.2.js" type="text/javascript"></script>
+<script src="~/Scripts/editableGrid.js" type="text/javascript"></script>
+
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Tuntikirjaus</h1>
+</div>
+
+<div class="row">
+
+    <div class="container">
+
+        <hr />
+        <div>
+            <div style="margin-bottom: 10px; display: inline-block; float: left;">
+                <label style="font-size: 20px; margin-right: 20px;">Kirjautunut käyttäjä: @ViewBag.Henkilo</label>
+            </div>
+            <div style="margin-bottom: 10px; margin-right: 50px; display: inline-block; float: righ;">
+                <button class="btn btn-primary" style="float:left"> Edellinen </button>
+                <label style="float:left; font-size: 20px; margin: auto 10px;">Viikko @ViewBag.Viikkonumero</label>
+                <button class="btn btn-primary">Seuraava</button>
+                <div style="clear: both;"></div>
+            </div>
+        </div>
+        <div style="clear: both;"></div>
+        <div id="table" class="table-editable">
+            <span class="table-add glyphicon glyphicon-plus"></span>
+            <table class="table">
+                <tr>
+                    <th>Kategoria</th>
+                    <th>Tehtävä</th>
+                    <th>Maanantai</th>
+                    <th>Tiistai</th>
+                    <th>Keskiviikko</th>
+                    <th>Torstai</th>
+                    <th>Perjantai</th>
+                    <th>Lauantai</th>
+                    <th>Sunnuntai</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+
+                <!-- This is our clonable table line -->
+                <tr class="hide">
+                    <td contenteditable="true">
+                        <select class="form-control kategoria">
+                            <option></option>
+                            <option>Medbit - Yleiset</option>
+                            <option>Medbit - Poissaolot</option>
+                            <option>Kommunikaatiopalvelut - Yleiset</option>
+                            <option>Kommunikaatiopalvelut - Ylläpito</option>
+                            <option>Kommunikaatiopalvelut - Projektit</option>
+                        </select>
+                    </td>
+                    <td contenteditable="true" class="tuntikirjaus-tehtava"></td>
+                    <td contenteditable="true" class="tuntikirjaus-ma"></td>
+                    <td contenteditable="true" class="tuntikirjaus-ti"></td>
+                    <td contenteditable="true" class="tuntikirjaus-ke"></td>
+                    <td contenteditable="true" class="tuntikirjaus-to"></td>
+                    <td contenteditable="true" class="tuntikirjaus-pe"></td>
+                    <td contenteditable="true" class="tuntikirjaus-la"></td>
+                    <td contenteditable="true" class="tuntikirjaus-su"></td>
+                    <td>
+                        <span class="table-remove glyphicon glyphicon-remove"></span>
+                    </td>
+                    <td>
+                        <span class="table-up glyphicon glyphicon-arrow-up"></span>
+                        <span class="table-down glyphicon glyphicon-arrow-down"></span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <button id="export-btn" class="btn btn-primary">Tallenna tuntikirjaus</button>
+        <p id="export"></p>
+    </div>
+
+</div>
+
+
+
